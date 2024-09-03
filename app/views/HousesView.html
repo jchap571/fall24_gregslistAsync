@@ -1,0 +1,97 @@
+<div class="container">
+  <h1>Wanna Buy a House?</h1>
+  <section class="row">
+    <div class="col-12">
+      <form onsubmit="app.HousesController.createHouse()">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Year Built">
+          <label for="floatingInput">Year Built</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Listing Name">
+          <label for="floatingInput">Listing Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="floatingInput" placeholder="Number of bedrooms">
+          <label for="floatingInput">Number of Bedrooms</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Number of Bathrooms">
+          <label for="floatingInput">Number of Bathrooms</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Square Footage">
+          <label for="floatingInput">Square Footage</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Price">
+          <label for="floatingInput">Price</label>
+        </div>
+        <div class="">
+          <label for="imgUrl">House Image</label>
+          <input id="imgUrl" name="imgUrl" type="url" required maxlength="2000" placeholder="House Image...">
+        </div>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Describe your House" id="floatingTextarea2"
+            style="height: 100px"></textarea>
+          <label for="floatingTextarea2">Describe your House</label>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Start of house list HTML template -->
+  <section class="row">
+    <div class="col-12">
+      <div id="houses-listings" class="row">
+        <div class="col-md-4 card p-1">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG91c2VzfGVufDB8fDB8fHww"
+            alt="house-picture">
+        </div>
+        <div class="col-md-8">
+          <button class="bg-danger">Delete</button>
+          <p>3 Bedrooms | 2 Bathrooms | 2 Level Home</p>
+          <p>Built in 1989</p>
+          <h3>$130,000</h3>
+          <p>Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit culpa in nostrum
+            consequuntur porro?</p>
+          <p>Listing created on: ${this.createdAt}</p>
+          <button class="bg-primary">Contact Seller</button>
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+
+</div>
