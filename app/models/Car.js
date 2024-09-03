@@ -4,7 +4,7 @@ import { Profile } from "./Profile.js"
 
 export class Car {
   constructor(data) {
-    this.id = data.id
+    this.id = data.id // the API/database will generate an id for us, and we should save that to our model from now on.
     this.make = data.make
     this.model = data.model
     this.imgUrl = data.imgUrl
