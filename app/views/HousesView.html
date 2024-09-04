@@ -1,35 +1,31 @@
 <div class="container">
   <h1>Wanna Buy a House?</h1>
   <section class="row">
-    <div class="col-12">
+    <div id="house-form" class="col-12 d-none">
       <form onsubmit="app.HousesController.createHouse()">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Year Built">
+          <input type="number" class="form-control" id="floatingInput" placeholder="Number of bedrooms" required>
+          <label for="floatingInput">Bedrooms</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="floatingInput" placeholder="Number of Bathrooms" required>
+          <label for="floatingInput">Bathrooms</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="floatingInput" placeholder="Floors" required>
+          <label for="floatingInput">Levels</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="floatingInput" placeholder="Year Built" required>
           <label for="floatingInput">Year Built</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Listing Name">
-          <label for="floatingInput">Listing Name</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="floatingInput" placeholder="Number of bedrooms">
-          <label for="floatingInput">Number of Bedrooms</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Number of Bathrooms">
-          <label for="floatingInput">Number of Bathrooms</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Square Footage">
-          <label for="floatingInput">Square Footage</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Price">
-          <label for="floatingInput">Price</label>
         </div>
         <div class="">
           <label for="imgUrl">House Image</label>
-          <input id="imgUrl" name="imgUrl" type="url" required maxlength="2000" placeholder="House Image...">
+          <input id="imgUrl" name="imgUrl" type="string" required maxlength="2000" placeholder="House Image...">
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Price" required>
+          <label for="floatingInput">Price</label>
         </div>
         <div class="form-floating">
           <textarea class="form-control" placeholder="Describe your House" id="floatingTextarea2"
@@ -41,6 +37,8 @@
       </form>
     </div>
   </section>
+       
+        
 
 
   <!-- Start of house list HTML template -->
