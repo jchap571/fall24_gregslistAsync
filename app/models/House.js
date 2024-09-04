@@ -26,9 +26,9 @@ export class House {
         </div>
         <div class="col-md-8">
           <button class="bg-danger">Delete</button>
-          <p>${this.bedrooms} | ${this.bathrooms} | ${this.levels}</p>
+          <p>${this.bedrooms} Bedrooms | ${this.bathrooms} Bathrooms| ${this.levels} Levels</p>
           <p>${this.year}</p>
-          <h3>${this.price}</h3>
+          <h3>$ ${this.price}</h3>
           <p>${this.description}</p>
           <p>Listing created on: ${this.createdAt}</p>
           <button class="bg-primary">Contact Seller</button>

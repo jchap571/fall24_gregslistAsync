@@ -8,8 +8,8 @@ export class HousesController {
     console.log('houses controller is loaded')
     AppState.on('houses', this.drawHouses)
     this.getHouses()
-
   }
+
 
 
   drawHouses() {
