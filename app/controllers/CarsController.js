@@ -29,6 +29,18 @@ export class CarsController {
     setHTML('car-listings', carsHTML)
   }
 
+  showCarForm() {
+    // if the user is not logged in
+    if (AppState.user == null) { return }
+
+    const carFormElem = document.getElementById('car-form')
+
+    // if the user has left the cars page
+    if (carFormElem == null) { return }
+
+    // removes class from element, which makes it display to the page
+    carFormElem.classList.remove('d-none')
+  }
 
 
   async getCars() {
@@ -44,6 +56,7 @@ export class CarsController {
   }
 
   async createCar() {
+    // REVIEW nothing much has changed here aside from the try/catch
     try {
       event.preventDefault()
       const carFormElem = event.target
@@ -58,12 +71,5 @@ export class CarsController {
     }
   }
 
-  showCarForm() {
-    if (AppState.user == null) { return }
 
-    const carFormElem = document.getElementById('car-form')
-    if (carFormElem == null) { return }
-
-    carFormElem.classList.remove('d-none')
-  }
 }

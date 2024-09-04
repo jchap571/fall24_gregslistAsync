@@ -3,15 +3,16 @@ import { Pop } from "./Pop.js";
 /**
  * Supporting types for the router
  * NOTE Controllers must be non instantiated 
- * @typedef {Function[]} middleware
- * @typedef {Function[]} controller
+ * @typedef {Function} middleware
+ * @typedef {Function} controller
+ */
+
+/**
+ * 
+ * @typedef {{path: string, middleware?:middleware[], controllers?:controller[], view?: string, target?: string}} routeConfig 
  */
 
 class Route {
-  /**
-   * 
-   * @param {{path: string, middleware?:middleware[], controllers:controller[], view?: string, target?: string}} routeConfig 
-   */
   constructor(routeConfig) {
     this.params = {}
 
@@ -83,6 +84,9 @@ export class Router {
 
   app = {}
 
+  /**
+   * @param {routeConfig[]} routeConfig
+   */
   constructor(routeConfig) {
     this.routes = routeConfig.map(r => new Route(r))
   }
